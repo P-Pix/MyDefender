@@ -9,4 +9,6 @@
 #ifndef _DEFENDER_HPP_
 #define _DEFENDER_HPP_
 
+#include "Defender/Tower1.hpp"
+
 #endif

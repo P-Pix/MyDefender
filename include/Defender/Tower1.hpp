@@ -13,7 +13,7 @@
 #include "../Stat.hpp"
 #include "../Sprite.hpp"
 
-class Tower1: public Stat, public Sprite{
+class Tower1: public Stat, public Sprite {
 
 };
 
