@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "Monster/Tomate.hpp"
+#include "Monster.hpp"
 
 class Window
 {
