@@ -17,12 +17,21 @@ MonsterTomate::MonsterTomate(void)
     liste.push_back("image/Monster/Tomate/4.png");
     this->setListeAnimate(liste);
     this->printAddressImage();
+
+    this->attributStat();
 }
 
 MonsterTomate::MonsterTomate(std::vector<std::string> ListeAnimate) : Sprite(ListeAnimate)
 {
+    this->attributStat();
 }
 
-MonsterTomate::~MonsterTomate(void) {
-    
+MonsterTomate::~MonsterTomate(void)
+{
+}
+
+void MonsterTomate::attributStat(void)
+{
+    this->m_life = 100;
+    this->m_power = 10;
 }

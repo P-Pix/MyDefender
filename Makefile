@@ -1,6 +1,8 @@
 DATA	=	src/*.cpp\
 			src/Window/*.cpp\
 			src/Sprite/*.cpp\
+			src/Stat/*.cpp\
+			\
 			src/Monster/Tomate/*.cpp\
 
 VERSION	=	-std=c++2a\
