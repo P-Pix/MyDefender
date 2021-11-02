@@ -1,7 +1,8 @@
 DATA	=	src/*.cpp\
-			src/Window/*.cpp\
+			src/Game/*.cpp\
 			src/Sprite/*.cpp\
 			src/Stat/*.cpp\
+			src/Window/*.cpp\
 			\
 			src/Defender/Tower1/*.cpp\
 			src/Defender/Tower2/*.cpp\

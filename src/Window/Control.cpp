@@ -28,5 +28,11 @@ void Window::pollEvent(void)
                 this->m_Window->close();
             }
         }
+        else if (this->m_Event.type == sf::Event::MouseButtonPressed)
+        {
+            std::cout << "Mousse pressed" << std::endl;
+            std::cout << "X : " << this->m_Mouse->getPosition().x - this->m_Window->getPosition().x << std::endl;
+            std::cout << "Y : " << this->m_Mouse->getPosition().y - this->m_Window->getPosition().y << std::endl;
+        }
     }
 }

@@ -11,7 +11,8 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "Monster.hpp"
+ 
+#include "Game.hpp"
 
 class Window
 {
@@ -19,8 +20,9 @@ private:
     sf::VideoMode *m_VideoMode;
     sf::RenderWindow *m_Window;
     sf::Event m_Event;
+    sf::Mouse *m_Mouse;
 
-    MonsterTomate toto;
+    Game m_Game;
 
 protected:
 public:
@@ -36,6 +38,9 @@ public:
 
     /// Detected Keyboard / Mouse Event
     void pollEvent(void);
+
+    /// Update all the screen
+    void updateWindow(void);
 };
 
 #endif

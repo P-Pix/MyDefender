@@ -15,6 +15,7 @@ int main(int argc, char **argv)
     while (Window.isOpen())
     {
         Window.pollEvent();
+        Window.updateWindow();
     }
     return EXIT_SUCCESS;
 }

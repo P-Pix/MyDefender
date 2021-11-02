@@ -20,5 +20,6 @@ Window::Window(int frame)
 Window::~Window(void)
 {
     delete this->m_VideoMode;
+    delete this->m_Mouse;
     delete this->m_Window;
 }
