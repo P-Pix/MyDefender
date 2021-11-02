@@ -11,12 +11,15 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "Monster/Tomate.hpp"
 
 class Window {
     private:
         sf::VideoMode *m_VideoMode;
         sf::RenderWindow *m_Window;
         sf::Event m_Event;
+
+        MonsterTomate toto;
 
     protected:
 

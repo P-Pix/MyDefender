@@ -24,6 +24,8 @@ class MonsterTomate: public Sprite {
         /// Constructor with liste address file
         /// \param ListeAnimate liste address file
         MonsterTomate(std::vector<std::string> ListeAnimate);
+
+        ~MonsterTomate(void);
 };
 
 #endif

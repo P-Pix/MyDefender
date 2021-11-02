@@ -24,9 +24,11 @@ class Sprite {
 
         void setListeAnimate(std::vector<std::string> listeAniamte);
 
+        void printAddressImage(void);
+
     public:
         Sprite();
-        
+
         /// Sprite constructor
         /// \param listeaddress sprite address
         Sprite(std::vector<std::string> listeaddress);

@@ -28,6 +28,4 @@ void Sprite::setListeAnimate(std::vector<std::string> listeAniamte) {
 }
 
 Sprite::~Sprite(void) {
-    delete &this->m_Texture;
-    delete &this->m_Sprite;
 }
