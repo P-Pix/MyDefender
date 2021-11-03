@@ -10,10 +10,15 @@
 
 Monster::Monster(void) 
 {
-
 }
 
 Monster::~Monster(void) 
 {
     
+}
+
+void Monster::setStat(int life, int power, int cadence) {
+    this->m_life = life;
+    this->m_power = power;
+    this->m_cadence = cadence;
 }

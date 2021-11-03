@@ -6,14 +6,12 @@
  * 
  */
 
-#include "../../include/Game.hpp"
+#include "../../include/Defender/Defender.hpp"
 
-Game::Game(void) 
-{
-    this->newMonster(0);
+Defender::Defender(void) {
+
 }
 
-Game::~Game(void)
-{
+Defender::~Defender(void) {
     
 }

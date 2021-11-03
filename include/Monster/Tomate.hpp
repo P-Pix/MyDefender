@@ -12,10 +12,8 @@
 #include <iostream>
 
 #include "Monster.hpp"
-#include "../Sprite.hpp"
-#include "../Stat.hpp"
 
-class MonsterTomate : public Sprite, public Stat, public Monster
+class MonsterTomate : public Monster
 {
 private:
     int m_defaultlife = 100;

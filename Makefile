@@ -4,6 +4,7 @@ DATA	=	src/*.cpp\
 			src/Stat/*.cpp\
 			src/Window/*.cpp\
 			\
+			src/Defender/*.cpp\
 			src/Defender/Tower1/*.cpp\
 			src/Defender/Tower2/*.cpp\
 			\

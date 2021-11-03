@@ -18,21 +18,15 @@ MonsterTomate::MonsterTomate(void)
     this->setListeAnimate(liste);
     this->printAddressImage();
 
-    this->attributStat();
+    this->setStat(this->m_defaultlife, this->m_defaultpower, this->m_defaultcadence);
 }
 
-MonsterTomate::MonsterTomate(std::vector<std::string> ListeAnimate) : Sprite(ListeAnimate)
+MonsterTomate::MonsterTomate(std::vector<std::string> ListeAnimate)
 {
-    this->attributStat();
+    setListeAnimate(ListeAnimate);
+    this->setStat(this->m_defaultlife, this->m_defaultpower, this->m_defaultcadence);
 }
 
 MonsterTomate::~MonsterTomate(void)
 {
-}
-
-void MonsterTomate::attributStat(void)
-{
-    this->m_life = this->m_defaultlife;
-    this->m_power = this->m_defaultpower;
-    this->m_cadence = this->m_defaultcadence;
 }

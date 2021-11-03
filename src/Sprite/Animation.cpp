@@ -18,3 +18,19 @@ void Sprite::nextAnimation(void)
         exit(EXIT_FAILURE);
     }
 }
+
+void Sprite::moveRight(void) {
+    this->m_Sprite.move(this->m_Right);
+}
+
+void Sprite::moveLeft(void) {
+    this->m_Sprite.move(this->m_Left);
+}
+
+void Sprite::moveUp(void) {
+    this->m_Sprite.move(this->m_Up);
+}
+
+void Sprite::moveDown(void) {
+    this->m_Sprite.move(this->m_Down);
+}

@@ -6,8 +6,8 @@
  * 
  */
 
-#ifndef _DEFENDER_HPP_
-#define _DEFENDER_HPP_
+#ifndef _DEFENDERS_HPP_
+#define _DEFENDERS_HPP_
 
 #include "Defender/Tower1.hpp"
 

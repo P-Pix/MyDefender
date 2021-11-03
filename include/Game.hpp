@@ -19,11 +19,11 @@
 
 class Game {
     private:
-        MonsterTomate toto;
-
         std::vector<sf::Sprite> m_ListSprite;
 
         std::vector<Monster> m_ListMonster;
+
+        std::vector<Defender> m_ListDefender;
 
     protected:
 
@@ -39,6 +39,12 @@ class Game {
 
         /// \return Sprite List for drawing
         std::vector<sf::Sprite> getListSprite(void) const;
+
+        /// One turn execution
+        void execution(void);
+
+        /// Create a new Monster
+        void newMonster(int type);
 };
 
 #endif

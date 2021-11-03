@@ -12,16 +12,16 @@
 #include <iostream>
 
 #include "Monster.hpp"
-#include "../Sprite.hpp"
-#include "../Stat.hpp"
 
-class MonsterCourgette : public Sprite, public Stat, public Monster
+class MonsterCourgette : public Monster
 {
     private:
 
     protected:
 
     public:
+        MonsterCourgette(void);
+        ~MonsterCourgette(void);
 };
 
 #endif

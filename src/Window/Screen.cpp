@@ -9,7 +9,7 @@
 #include "../../include/Window.hpp"
 
 void Window::updateWindow(void) {
-    this->m_Game.makeListSprite();
+    this->m_Game.execution();
     this->m_Window->clear();
     std::vector<sf::Sprite> ListSprite = this->m_Game.getListSprite();
     for (int i = 0; i < ListSprite.size(); i ++) {

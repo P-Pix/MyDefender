@@ -15,5 +15,6 @@
 
 #include "Monster/Tomate.hpp"
 #include "Monster/Courgette.hpp"
+#include "Monster/Monster.hpp"
 
 #endif

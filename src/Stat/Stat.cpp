@@ -19,6 +19,7 @@ void Stat::setDamage(int damage)
 
 void Stat::kill(void)
 {
+    this->m_life = 0;
     this->m_alive = false;
 }
 

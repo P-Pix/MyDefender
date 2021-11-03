@@ -15,16 +15,26 @@
 #include "../Stat.hpp"
 #include "../Sprite.hpp"
 
-class Monster {
+class Monster : public Stat, public Sprite{
     private:
 
     protected:
 
-    public:
-        Monster(void);
-        ~Monster(void);
+        /// Attribut all stats
+        void setStat(int life, int power, int cadence);
 
+    public:
+        /// Construtor
+        Monster(void);
+
+        /// Destrcutor
+        ~Monster(void);
+        
+        /// Generate a new Monster
         void Spawn(void);
+        
+        /// inflict damage to a tower
+        int inflictDamage(Sprite Monster, Sprite Tower);
 };
 
 #endif
