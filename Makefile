@@ -7,6 +7,7 @@ DATA	=	src/*.cpp\
 			src/Defender/Tower1/*.cpp\
 			src/Defender/Tower2/*.cpp\
 			\
+			src/Monster/*.cpp\
 			src/Monster/Tomate/*.cpp\
 			src/Monster/Courgette/*.cpp\
 

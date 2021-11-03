@@ -9,7 +9,7 @@
 #include "../../include/Game.hpp"
 
 Game::Game(void) {
-
+    this->m_ListMonster.push_back(toto);
 }
 
 Game::~Game(void)

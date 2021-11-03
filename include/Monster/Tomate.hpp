@@ -10,12 +10,18 @@
 #define _MONSTER_TOMATE_HPP_
 
 #include <iostream>
+
+#include "Monster.hpp"
 #include "../Sprite.hpp"
 #include "../Stat.hpp"
 
-class MonsterTomate : public Sprite, public Stat
+class MonsterTomate : public Sprite, public Stat, public Monster
 {
 private:
+    int m_defaultlife = 100;
+    int m_defaultpower = 10;
+    /// All m_defaultcadence the tomate inflict damage
+    int m_defaultcadence = 12;
     /// attribut all stats
     void attributStat(void);
 

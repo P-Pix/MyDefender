@@ -8,6 +8,10 @@
 
 #include "../../include/Game.hpp"
 
-std::vector<sf::Sprite> Game::getListSprite(void) {
+void Game::makeListSprite(void) {
+    this->m_ListSprite.clear();
+}
+
+std::vector<sf::Sprite> Game::getListSprite(void) const {
     return this->m_ListSprite;
 }

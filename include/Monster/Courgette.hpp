@@ -10,11 +10,18 @@
 #define _MONSTER_COURGETTE_HPP
 
 #include <iostream>
+
+#include "Monster.hpp"
 #include "../Sprite.hpp"
 #include "../Stat.hpp"
 
-class MonsterCourgette : public Sprite, public Stat
+class MonsterCourgette : public Sprite, public Stat, public Monster
 {
+    private:
+
+    protected:
+
+    public:
 };
 
 #endif

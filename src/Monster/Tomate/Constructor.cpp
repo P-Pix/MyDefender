@@ -32,6 +32,7 @@ MonsterTomate::~MonsterTomate(void)
 
 void MonsterTomate::attributStat(void)
 {
-    this->m_life = 100;
-    this->m_power = 10;
+    this->m_life = this->m_defaultlife;
+    this->m_power = this->m_defaultpower;
+    this->m_cadence = this->m_defaultcadence;
 }

@@ -22,7 +22,22 @@ void Stat::kill(void)
     this->m_alive = false;
 }
 
-int Stat::getPower(void)
+int Stat::getPower(void) const
 {
     return this->m_power;
+}
+
+int Stat::getCadence(void) const
+{
+    return this->m_cadence;
+}
+
+int Stat::getDamage(void)
+{
+    this->m_waiting ++;
+    this->m_waiting %= this->m_cadence;
+    if (this->m_waiting == 0) {
+        return this->m_power;
+    }
+    return 0;
 }
