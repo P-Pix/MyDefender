@@ -9,6 +9,8 @@
 #include <iostream>
 #include "../include/Window.hpp"
 
+/// @brief Main function
+/// @return EXIT_SUCCESS
 int main(int argc, char **argv)
 {
     Window Window(60);

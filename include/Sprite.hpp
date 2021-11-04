@@ -9,6 +9,11 @@
 #ifndef _SPRITE_HPP_
 #define _SPRITE_HPP_
 
+#define LEFT    0b00001000
+#define RIGHT   0b00001001
+#define UP      0b00001010
+#define DOWN    0b00001011
+
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
@@ -17,6 +22,8 @@ class Sprite
 {
 private:
     unsigned short m_Frame;
+    unsigned short m_CadenceFrame = 12;
+    unsigned short m_Cadence;
     int m_speed = 1;
     std::vector<std::string> m_ListAnimate;
     sf::Texture m_Texture;
@@ -24,7 +31,7 @@ private:
     sf::Vector2f m_Right = sf::Vector2f(this->m_speed, 0);
     sf::Vector2f m_Left = sf::Vector2f(-this->m_speed, 0);
     sf::Vector2f m_Up = sf::Vector2f(0, -this->m_speed);
-    sf::Vector2f m_Down = sf::Vector2f(this->m_speed, 0);
+    sf::Vector2f m_Down = sf::Vector2f(0, this->m_speed);
 
 protected:
     sf::Sprite m_Sprite;
@@ -50,6 +57,10 @@ public:
 
     /// Switch Sprite to the next
     void nextAnimation(void);
+
+    /// Switch Sprite to the next with a movemement
+    /// \param direction direction of the movemement
+    void nextAnimation(int direction);
 
     /// \return Sprite SFML
     sf::Sprite getSprite(void);
