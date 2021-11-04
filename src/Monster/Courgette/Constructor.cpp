@@ -15,3 +15,7 @@ MonsterCourgette::MonsterCourgette(void) {
 MonsterCourgette::~MonsterCourgette(void) {
     
 }
+
+MonsterCourgette* MonsterCourgette::createMonsterCourgette(void) {
+    return new MonsterCourgette();
+}

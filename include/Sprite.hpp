@@ -73,7 +73,10 @@ public:
     void moveDown(void);
 
     /// \return class
-    Sprite getClass(void);
+    Sprite* getClass(void);
+
+    /// \return address
+    Sprite getAddress(void);
 };
 
 #endif

@@ -9,12 +9,22 @@
 #include "../../include/Game.hpp"
 
 void Game::newMonster(int type) {
-    if (type == 0) {
-        MonsterTomate Tomate;
-        this->m_ListMonster.push_back(&Tomate);
+    if (type == TOMATE) {
+        this->m_ListMonster.push_back(MonsterTomate::createMonsterTomate());
     }
-    else if (type == 1) {
-        MonsterCourgette Courgette;
-        this->m_ListMonster.push_back(&Courgette);
+    else if (type == COURGETTE) {
+        this->m_ListMonster.push_back(MonsterCourgette::createMonsterCourgette());
+    }
+    else {
+        std::cout << "Error : type of monster not found" << std::endl;
+    }
+}
+
+void Game::newDefender(int type) {
+    if (type == TOWER1) {
+        this->m_ListDefender.push_back(Tower1::createTower1());
+    }
+    else {
+        std::cout << "Error : type of defender not found" << std::endl;
     }
 }

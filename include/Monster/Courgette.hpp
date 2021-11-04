@@ -22,6 +22,8 @@ class MonsterCourgette : public Monster
     public:
         MonsterCourgette(void);
         ~MonsterCourgette(void);
+
+        static MonsterCourgette* createMonsterCourgette(void);
 };
 
 #endif

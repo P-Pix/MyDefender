@@ -15,6 +15,7 @@ Sprite::Sprite(std::vector <std::string> listeaddress) {
 Sprite::Sprite(void) {
 }
 
+
 void Sprite::setListeAnimate(std::vector <std::string> listeAnimate) {
     this->m_ListAnimate = listeAnimate;
     this->m_Frame = 0;
@@ -23,7 +24,7 @@ void Sprite::setListeAnimate(std::vector <std::string> listeAnimate) {
         fprintf(stderr, "Error loading texture\n");
         exit(EXIT_FAILURE);
     }
-    std::cout << "Tomate load with image = " << this->m_ListAnimate[0] <<std::endl;
+    std::cout << "Image Load = " << this->m_ListAnimate[0] <<std::endl;
     this->m_Sprite.setTexture(this->m_Texture);
 }
 
@@ -34,6 +35,10 @@ sf::Sprite Sprite::getSprite(void) {
     return this->m_Sprite;
 }
 
-Sprite Sprite::getClass(void) {
+Sprite* Sprite::getClass(void) {
+    return this;
+}
+
+Sprite Sprite::getAddress(void) {
     return *this;
 }

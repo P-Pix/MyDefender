@@ -18,10 +18,19 @@ class Defender: public Sprite, public Stat {
 
     protected:
 
+        /// Attribut all stats
+        void setStat(int life, int power, int cadence);
+
     public:
         Defender(void);
 
         ~Defender(void);
+
+        /// Return the class address
+        Defender getClass(void);
+
+        /// \return class type
+        Defender* getClassType(void);
 };
 
 #endif

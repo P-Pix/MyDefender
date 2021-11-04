@@ -10,7 +10,8 @@
 
 Game::Game(void) 
 {
-    this->newMonster(0);
+    this->newMonster(TOMATE); // TODO : fixe Segmentation fault
+    this->newDefender(TOWER1); // TODO : fixe Segmentation fault
 }
 
 Game::~Game(void)
