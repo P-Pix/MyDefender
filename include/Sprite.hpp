@@ -33,6 +33,21 @@ private:
     sf::Vector2f m_Up = sf::Vector2f(0, -this->m_speed);
     sf::Vector2f m_Down = sf::Vector2f(0, this->m_speed);
 
+    /// Switch Sprite to the next
+    void nextAnimation(void);
+
+    /// Move sprite right
+    void moveRight(void);
+
+    /// Move sprite left
+    void moveLeft(void);
+
+    /// Move sprite up
+    void moveUp(void);
+
+    /// Move sprite down
+    void moveDown(void);
+
 protected:
     sf::Sprite m_Sprite;
 
@@ -55,9 +70,6 @@ public:
     /// Destructor
     ~Sprite(void);
 
-    /// Switch Sprite to the next
-    void nextAnimation(void);
-
     /// Switch Sprite to the next with a movemement
     /// \param direction direction of the movemement
     void nextAnimation(int direction);
@@ -70,18 +82,6 @@ public:
     /// @param second Second sprite
     /// @return True if the two sprites collide
     static bool collide(Sprite first, Sprite second);
-
-    /// Move sprite right
-    void moveRight(void);
-
-    /// Move sprite left
-    void moveLeft(void);
-
-    /// Move sprite up
-    void moveUp(void);
-
-    /// Move sprite down
-    void moveDown(void);
 
     /// \return class
     Sprite* getClass(void);

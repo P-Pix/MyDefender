@@ -42,3 +42,21 @@ int Stat::getDamage(void)
     }
     return 0;
 }
+
+bool Stat::isAlive(void) const
+{
+    return this->m_alive;
+}
+
+int Stat::getLife(void) const
+{
+    return this->m_life;
+}
+
+void Stat::print(void) const
+{
+    std::cout << "Stat : " << std::endl;
+    std::cout << "Life : " << this->m_life << std::endl;
+    std::cout << "Power : " << this->m_power << std::endl;
+    std::cout << "Cadence : " << this->m_cadence << std::endl;
+}

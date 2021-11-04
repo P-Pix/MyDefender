@@ -3,14 +3,8 @@ DATA	=	src/*.cpp\
 			src/Sprite/*.cpp\
 			src/Stat/*.cpp\
 			src/Window/*.cpp\
-			\
 			src/Defender/*.cpp\
-			src/Defender/Tower1/*.cpp\
-			src/Defender/Tower2/*.cpp\
-			\
 			src/Monster/*.cpp\
-			src/Monster/Tomate/*.cpp\
-			src/Monster/Courgette/*.cpp\
 
 VERSION	=	-std=c++2a\
 

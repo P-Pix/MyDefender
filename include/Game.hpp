@@ -26,6 +26,12 @@ private:
 
     std::vector<Defender *> m_ListDefender;
 
+    /// check if monster in list monster are dead
+    void checkMonster(void);
+
+    /// check if defender in list defender are dead
+    void checkDefender(void);
+
 protected:
 public:
     /// Constructor
