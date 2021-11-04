@@ -10,6 +10,7 @@
 
 void Game::makeListSprite(void)
 {
+    std::cout << "bug make sprite = " << this->m_ListMonster.size() << std::endl;
     this->m_ListSprite.clear();
     for (int i = 0; i < this->m_ListDefender.size(); i++)
     {
@@ -17,7 +18,7 @@ void Game::makeListSprite(void)
     }
     for (int i = 0; i < this->m_ListMonster.size(); i++)
     {
-        this->m_ListSprite.push_back(this->m_ListMonster[i].getSprite());
+        this->m_ListSprite.push_back(this->m_ListMonster[i]->getSprite());
     }
 }
 

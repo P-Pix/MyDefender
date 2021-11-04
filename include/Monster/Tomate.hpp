@@ -13,13 +13,13 @@
 
 #include "Monster.hpp"
 
-class MonsterTomate : public Monster
-{
+class MonsterTomate : public Monster {
 private:
     int m_defaultlife = 100;
     int m_defaultpower = 10;
     /// All m_defaultcadence the tomate inflict damage
     int m_defaultcadence = 12;
+
     /// attribut all stats
     void attributStat(void);
 
@@ -30,7 +30,7 @@ public:
 
     /// Constructor with liste address file
     /// \param ListeAnimate liste address file
-    MonsterTomate(std::vector<std::string> ListeAnimate);
+    MonsterTomate(std::vector <std::string> ListeAnimate);
 
     ~MonsterTomate(void);
 };

@@ -21,7 +21,7 @@ class Game {
     private:
         std::vector<sf::Sprite> m_ListSprite;
 
-        std::vector<Monster> m_ListMonster;
+        std::vector<Monster *> m_ListMonster;
 
         std::vector<Defender> m_ListDefender;
 

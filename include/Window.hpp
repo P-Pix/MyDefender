@@ -33,10 +33,10 @@ public:
     /// Destructor
     ~Window(void);
 
-    /// \return true if the window is open, false if not
+    /// Return if the window is open
     bool isOpen(void);
 
-    /// Detected Keyboard / Mouse Event
+    /// Detect Events
     void pollEvent(void);
 
     /// Update all the screen

@@ -11,10 +11,10 @@
 void Game::newMonster(int type) {
     if (type == 0) {
         MonsterTomate Tomate;
-        this->m_ListMonster.push_back(Tomate);
+        this->m_ListMonster.push_back(&Tomate);
     }
     else if (type == 1) {
         MonsterCourgette Courgette;
-        this->m_ListMonster.push_back(Courgette);
+        this->m_ListMonster.push_back(&Courgette);
     }
 }

@@ -54,7 +54,10 @@ public:
     /// \return Sprite SFML
     sf::Sprite getSprite(void);
 
-    /// \return True if two sprite are colliding, false if not
+    /// Return true if two sprites collide
+    /// @param first First sprite
+    /// @param second Second sprite
+    /// @return True if the two sprites collide
     static bool collide(Sprite first, Sprite second);
 
     /// Move sprite right
@@ -68,6 +71,9 @@ public:
 
     /// Move sprite down
     void moveDown(void);
+
+    /// \return class
+    Sprite getClass(void);
 };
 
 #endif
