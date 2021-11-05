@@ -1,10 +1,11 @@
 DATA	=	src/*.cpp\
+			src/ControlPlayer/*.cpp\
+			src/Defender/*.cpp\
 			src/Game/*.cpp\
+			src/Monster/*.cpp\
 			src/Sprite/*.cpp\
 			src/Stat/*.cpp\
 			src/Window/*.cpp\
-			src/Defender/*.cpp\
-			src/Monster/*.cpp\
 
 VERSION	=	-std=c++2a\
 

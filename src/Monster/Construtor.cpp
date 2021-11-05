@@ -34,15 +34,12 @@ Monster *Monster::createMonster(int type)
                 10,
             },
         };
-    std::vector<std::vector<std::string>> m_listSprite =
+    std::vector<std::string> m_listSprite =
         {
             // Tomate
-            {
-                "image/Monster/Tomate/1.png",
-                "image/Monster/Tomate/2.png",
-                "image/Monster/Tomate/3.png",
-                "image/Monster/Tomate/4.png",
-            },
+            "image/Monster/Tomate/",
+            // Courgette
+            "image/Monster/Courgette/",
         };
     Monster *monster = new Monster();
     monster->setStat(m_listStat[type][0], m_listStat[type][1], m_listStat[type][2]);

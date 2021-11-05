@@ -14,8 +14,8 @@ void Sprite::nextAnimation(void)
     if (this->m_Cadence >= this->m_CadenceFrame)
     {
         this->m_Frame++;
-        this->m_Frame %= this->m_ListAnimate.size();
-        if (!this->m_Texture.loadFromFile(this->m_ListAnimate[this->m_Frame]))
+        this->m_Frame %= this->m_NBFrame;
+        if (!this->m_Texture.loadFromFile(this->m_ListAnimate + std::to_string(this->m_Frame) + ".png"))
         {
             fprintf(stderr, "Error loading texture\n");
             exit(EXIT_FAILURE);

@@ -15,7 +15,7 @@
 #define DOWN    0b00001011
 
 #include <iostream>
-#include <vector>
+#include <filesystem>
 #include <SFML/Graphics.hpp>
 
 class Sprite
@@ -24,8 +24,9 @@ private:
     unsigned short m_Frame;
     unsigned short m_CadenceFrame = 12;
     unsigned short m_Cadence;
+    unsigned int m_NBFrame;
     int m_speed = 1;
-    std::vector<std::string> m_ListAnimate;
+    std::string m_ListAnimate;
     sf::Texture m_Texture;
 
     sf::Vector2f m_Right = sf::Vector2f(this->m_speed, 0);
@@ -33,8 +34,6 @@ private:
     sf::Vector2f m_Up = sf::Vector2f(0, -this->m_speed);
     sf::Vector2f m_Down = sf::Vector2f(0, this->m_speed);
 
-    /// Switch Sprite to the next
-    void nextAnimation(void);
 
     /// Move sprite right
     void moveRight(void);
@@ -53,10 +52,11 @@ protected:
 
     /// Set Liste animate
     /// \param ListeAnimate liste address file animation
-    void setListeAnimate(std::vector<std::string> ListeAniamte);
+    void setListeAnimate(std::string ListeAniamte);
 
     /// Print all file address
     void printAddressImage(void);
+
 
 public:
     /// Sprite Constrcutor without address file list
@@ -65,11 +65,14 @@ public:
 
     /// Sprite constructor
     /// \param listeaddress sprite address
-    Sprite(std::vector<std::string> listeaddress);
+    Sprite(std::string listeaddress);
 
     /// Destructor
     ~Sprite(void);
 
+    /// Switch Sprite to the next
+    void nextAnimation(void);
+    
     /// Switch Sprite to the next with a movemement
     /// \param direction direction of the movemement
     void nextAnimation(int direction);
@@ -88,6 +91,10 @@ public:
 
     /// \return address
     Sprite getAddress(void);
+
+    /// \return type of sprite
+    std::string getName(void);
+    
 };
 
 #endif

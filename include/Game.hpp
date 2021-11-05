@@ -49,6 +49,9 @@ public:
     /// One turn execution
     void execution(void);
 
+    /// Next animation for all
+    void nextAnimation(void);
+
     /// Create a new Monster and add it to the list of Monster
     /// @param type : type of the Monster
     void newMonster(int type);

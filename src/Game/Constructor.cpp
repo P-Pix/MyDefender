@@ -16,5 +16,10 @@ Game::Game(void)
 
 Game::~Game(void)
 {
-    
+    for (int i = 0; i < this->m_ListDefender.size(); i ++) {
+        Defender::deleteDefender(this->m_ListDefender[i]);
+    }
+    for (int i = 0; i < this->m_ListMonster.size(); i ++) {
+        Monster::deleteMonster(this->m_ListMonster[i]);
+    }
 }

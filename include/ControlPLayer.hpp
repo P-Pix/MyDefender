@@ -9,17 +9,18 @@
 #ifndef _CONTROLPLAYER_HPP_
 #define _CONTROLPLAYER_HPP_
 
+#include <iostream>
+
 class ControlPlayer{
     private:
-        int m_nbrow;
-        int m_nbcol;
+        int m_nbrow = 2;
+        int m_nbcol = 4;
         int m_powerselect;
         int m_lifeselect;
         int m_cadenceselect;
+        bool m_select = false;
 
     protected:
-        /// receve stat of the element
-        void setStat(int power, int life, int cadence);
 
     public:
         /// Constructor
@@ -37,6 +38,10 @@ class ControlPlayer{
         /// get the Cadence
         int getCadenceSelect(void);
 
+        /// receve stat of the element
+        void setStat(int power, int life, int cadence);
+
+        /// get the 
 };
 
 #endif

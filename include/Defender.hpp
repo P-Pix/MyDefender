@@ -37,7 +37,7 @@ class Defender: public Sprite, public Stat {
         Defender* getClassType(void);
 
         static Defender* createDefender(int type);
-        static void destroyDefender(Defender* defender);
+        static void deleteDefender(Defender* defender);
 };
 
 #endif
