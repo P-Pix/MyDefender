@@ -49,6 +49,7 @@ void Game::checkMonster(void)
             Monster *tmp = this->m_ListMonster[i];
             this->m_ListMonster.erase(this->m_ListMonster.begin() + i);
             Monster::deleteMonster(tmp);
+            this->m_ListDefender[i]->print();
             i--;
         }
     }
