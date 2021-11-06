@@ -49,10 +49,20 @@ Defender *Defender::createDefender(int type)
         {
             "image/Defender/Tower1/",
         };
+    return Defender::createDefender(m_listStat[type], m_listSprite[type]);
+}
+
+Defender* Defender::createDefender(std::vector<int> listStat, std::string listSprite)
+{
     Defender *defender = new Defender();
-    defender->setStat(m_listStat[type][0], m_listStat[type][1], m_listStat[type][2]);
-    defender->setListeAnimate(m_listSprite[type]);
+    defender->setStat(listStat[0], listStat[1], listStat[2]);
+    defender->setListeAnimate(listSprite);
     return defender;
+}
+
+Defender* Defender::createTower1(void)
+{
+    return createDefender(std::vector<int>{300, 20, 10}, "image/Defender/Tower1/");
 }
 
 void Defender::deleteDefender(Defender *defender)

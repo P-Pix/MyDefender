@@ -7,6 +7,7 @@
  */
 
 #include <iostream>
+#include <algorithm>
 #include "../include/Window.hpp"
 
 /// @brief Main function

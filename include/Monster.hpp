@@ -21,6 +21,9 @@
 class Monster : public Stat, public Sprite
 {
 private:
+    /// create a new Monster
+    static Monster* createMonster(std::vector<int> listStat, std::string sprite);
+
 protected:
     /// Attribut all stats
     void setStat(int life, int power, int cadence);
@@ -32,8 +35,15 @@ public:
     /// Destrcutor
     ~Monster(void);
 
+
     /// create a new Monster
     static Monster *createMonster(int type);
+
+    /// create a new Monster Tomate
+    static Monster* createTomate(void);
+
+    /// create a new Monster Courgette
+    static Monster* createCourgette(void);
 
     /// Delete the Monster
     static void deleteMonster(Monster *monster);

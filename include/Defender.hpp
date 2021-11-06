@@ -25,6 +25,8 @@ class Defender: public Sprite, public Stat {
         /// Attribut all stats
         void setStat(int life, int power, int cadence);
 
+        static Defender* createDefender(std::vector<int> listStat, std::string sprite);
+
     public:
         Defender(void);
 
@@ -38,6 +40,7 @@ class Defender: public Sprite, public Stat {
 
         static Defender* createDefender(int type);
         static void deleteDefender(Defender* defender);
+        static Defender* createTower1(void);
 };
 
 #endif

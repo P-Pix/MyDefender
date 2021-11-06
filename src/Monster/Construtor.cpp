@@ -33,6 +33,13 @@ Monster *Monster::createMonster(int type)
                 20,
                 10,
             },
+
+            // Courgette
+            {
+                100,
+                30,
+                20,
+            },
         };
     std::vector<std::string> m_listSprite =
         {
@@ -41,10 +48,24 @@ Monster *Monster::createMonster(int type)
             // Courgette
             "image/Monster/Courgette/",
         };
+    return Monster::createMonster(m_listStat[type], m_listSprite[type]);
+}
+
+Monster* Monster::createMonster(std::vector<int> listStat, std::string sprite) {
     Monster *monster = new Monster();
-    monster->setStat(m_listStat[type][0], m_listStat[type][1], m_listStat[type][2]);
-    monster->setListeAnimate(m_listSprite[type]);
+    monster->setStat(listStat[0], listStat[1], listStat[2]);
+    monster->setListeAnimate(sprite);
     return monster;
+}
+
+Monster* Monster::createTomate(void)
+{
+    return Monster::createMonster(std::vector<int>{100, 20, 10}, "image/Monster/Tomate/");
+}
+
+Monster* Monster::createCourgette(void)
+{
+    return Monster::createMonster(std::vector<int>{100, 30, 20}, "image/Monster/Courgette/");
 }
 
 void Monster::deleteMonster(Monster *monster)
