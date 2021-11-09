@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
- 
+
 #include "Game.hpp"
 
 class Window
@@ -22,6 +22,8 @@ private:
     sf::Event m_Event;
     sf::Mouse *m_Mouse;
 
+    sf::Sprite m_ChoseDefender;
+    sf::Texture m_ChoseDefenderTexture;
     Game m_Game;
 
 protected:

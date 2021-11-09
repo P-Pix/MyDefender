@@ -9,9 +9,9 @@
 #ifndef _DEFENDER_HPP_
 #define _DEFENDER_HPP_
 
-#define TOWER1  0b00000000
-#define TOWER2  0b00000001
-#define TOWER3  0b00000010
+#define TOWER1  0b01000000
+#define TOWER2  0b01000001
+#define TOWER3  0b01000010
 
 #include <iostream>
 #include "Sprite.hpp"

@@ -6,6 +6,7 @@ DATA	=	src/*.cpp\
 			src/Sprite/*.cpp\
 			src/Stat/*.cpp\
 			src/Window/*.cpp\
+			src/Zone/*.cpp\
 
 VERSION	=	-std=c++2a\
 

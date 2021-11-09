@@ -9,8 +9,8 @@
 #ifndef _MONSTER_HPP_
 #define _MONSTER_HPP_
 
-#define TOMATE 0b00000000
-#define COURGETTE 0b00000001
+#define TOMATE      0b00100000
+#define COURGETTE   0b00100001
 
 #include <iostream>
 #include <SFML/Graphics.hpp>

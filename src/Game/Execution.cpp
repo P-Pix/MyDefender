@@ -8,14 +8,15 @@
 
 #include "../../include/Game.hpp"
 
-void Game::execution(void)
-{
-    for (int i = 0; i < this->m_ListMonster.size(); i++)
-    {
-        for (int j = 0; j < this->m_ListDefender.size(); j++)
-        {
-            this->m_ListDefender[j]->setDamage(this->m_ListMonster[i]->inflictDamage(this->m_ListMonster[i]->getAddress(), this->m_ListDefender[j]->getAddress()));
-            this->m_ListMonster[i]->setDamage(this->m_ListDefender[j]->inflictDamage(this->m_ListDefender[j]->getAddress(), this->m_ListMonster[i]->getAddress()));
+void Game::execution(void) {
+    for (int i = 0; i < this->m_ListMonster.size(); i++) {
+        for (int j = 0; j < this->m_ListDefender.size(); j++) {
+            this->m_ListDefender[j]->setDamage(
+                    this->m_ListMonster[i]->inflictDamage(this->m_ListMonster[i]->getAddress(),
+                                                          this->m_ListDefender[j]->getAddress()));
+            this->m_ListMonster[i]->setDamage(
+                    this->m_ListDefender[j]->inflictDamage(this->m_ListDefender[j]->getAddress(),
+                                                           this->m_ListMonster[i]->getAddress()));
         }
     }
     this->checkMonster();
@@ -24,11 +25,9 @@ void Game::execution(void)
     this->makeListSprite();
 }
 
-void Game::checkDefender(void)
-{
-    for (int i = 0; i < this->m_ListDefender.size(); i++)
-    {
-        if(!this->m_ListDefender[i]->isAlive()) {
+void Game::checkDefender(void) {
+    for (int i = 0; i < this->m_ListDefender.size(); i++) {
+        if (!this->m_ListDefender[i]->isAlive()) {
             std::cout << "Defender " << this->m_ListDefender[i]->getName() << " is dead" << std::endl;
             this->m_ListDefender[i]->print();
             Defender *tmp = this->m_ListDefender[i];
@@ -39,11 +38,9 @@ void Game::checkDefender(void)
     }
 }
 
-void Game::checkMonster(void)
-{
-    for (int i = 0; i < this->m_ListMonster.size(); i++)
-    {
-        if(!this->m_ListMonster[i]->isAlive()) {
+void Game::checkMonster(void) {
+    for (int i = 0; i < this->m_ListMonster.size(); i++) {
+        if (!this->m_ListMonster[i]->isAlive()) {
             std::cout << "Monster " << this->m_ListMonster[i]->getName() << " is dead" << std::endl;
             this->m_ListMonster[i]->print();
             Monster *tmp = this->m_ListMonster[i];
@@ -56,11 +53,10 @@ void Game::checkMonster(void)
 }
 
 void Game::nextAnimation(void) {
-    for (int i = 0; i < this->m_ListDefender.size(); i ++) {
+    for (int i = 0; i < this->m_ListDefender.size(); i++) {
         this->m_ListDefender[i]->nextAnimation();
     }
-    for (int i = 0; i < this->m_ListMonster.size(); i++)
-    {
+    for (int i = 0; i < this->m_ListMonster.size(); i++) {
         this->m_ListMonster[i]->nextAnimation(RIGHT);
-    }   
+    }
 }

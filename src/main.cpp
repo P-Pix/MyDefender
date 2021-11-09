@@ -5,20 +5,21 @@
  * @copyright Copyright (c) 2021
  *
  */
-
 #include <iostream>
-#include <algorithm>
+
 #include "../include/Window.hpp"
 
 /// @brief Main function
 /// @return EXIT_SUCCESS
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     Window Window(60);
-    while (Window.isOpen())
-    {
+    while (Window.isOpen()) {
         Window.pollEvent();
         Window.updateWindow();
     }
     return EXIT_SUCCESS;
 }
+
+/// End of file
+/// Language: C++
+/// Path: src/main.cpp

@@ -24,7 +24,7 @@ private:
     unsigned short m_Frame;
     unsigned short m_CadenceFrame = 12;
     unsigned short m_Cadence;
-    unsigned int m_NBFrame;
+    unsigned int m_NBFrame = 0;
     int m_speed = 1;
     std::string m_ListAnimate;
     sf::Texture m_Texture;
@@ -94,6 +94,26 @@ public:
 
     /// \return type of sprite
     std::string getName(void);
+
+    /// @return true if two sprites collide
+    /// @param firstupx first up left x
+    /// @param firstupy first up left y
+    /// @param firstdownx first down right x
+    /// @param firstdowny first down right y
+    /// @param secondupx second up left x
+    /// @param secondupy second up left y
+    /// @param seconddownx second down right x
+    /// @param seconddowny second down right y
+    static bool collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int secondupx, int secondupy, int seconddownx, int seconddowny);
+
+    /// @return true if point collide a zone
+    /// @param firstupx up left x
+    /// @param firstupy up left y
+    /// @param firstdownx down right x
+    /// @param firstdowny down right y
+    /// @param x point x
+    /// @param y point y
+    static bool collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int x, int y);
     
 };
 
