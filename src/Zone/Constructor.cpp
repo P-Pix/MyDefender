@@ -3,7 +3,7 @@
  * @author Guillaume LEMONNIER
 */
 
-#include "../../include/Zone.h"
+#include "../../include/Zone.hpp"
 
 Zone* createZone(int start_x, int start_y, int end_x, int end_y) {
     Zone* zone = new Zone;

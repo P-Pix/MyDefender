@@ -14,7 +14,7 @@
 
 #include "Game.hpp"
 
-class Window
+class Window : public Game
 {
 private:
     sf::VideoMode *m_VideoMode;

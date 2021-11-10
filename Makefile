@@ -7,6 +7,7 @@ DATA	=	src/*.cpp\
 			src/Stat/*.cpp\
 			src/Window/*.cpp\
 			src/Zone/*.cpp\
+			src/ZoneList/*.cpp\
 
 VERSION	=	-std=c++2a\
 
@@ -16,5 +17,8 @@ MODULE	=	-lsfml-window\
 
 NAME	=	MyDefender.obj\
 
+# compile with g++
 compile:
-	@(g++ -o $(NAME) $(DATA) $(MODULE) $(VERSION)) > /dev/null
+	@(echo "Compiling...")
+	@(g++ -o $(NAME) $(DATA) $(VERSION) $(MODULE))
+	@(echo "Done.")

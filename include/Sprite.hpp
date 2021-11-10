@@ -15,11 +15,11 @@
 #define DOWN    0b00001011
 
 #include <iostream>
+#include "ZoneList.hpp"
 #include <filesystem>
 #include <SFML/Graphics.hpp>
 
-class Sprite
-{
+class Sprite {
 private:
     unsigned short m_Frame;
     unsigned short m_CadenceFrame = 12;
@@ -72,7 +72,7 @@ public:
 
     /// Switch Sprite to the next
     void nextAnimation(void);
-    
+
     /// Switch Sprite to the next with a movemement
     /// \param direction direction of the movemement
     void nextAnimation(int direction);
@@ -87,7 +87,7 @@ public:
     static bool collide(Sprite first, Sprite second);
 
     /// \return class
-    Sprite* getClass(void);
+    Sprite *getClass(void);
 
     /// \return address
     Sprite getAddress(void);
@@ -104,17 +104,25 @@ public:
     /// @param secondupy second up left y
     /// @param seconddownx second down right x
     /// @param seconddowny second down right y
-    static bool collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int secondupx, int secondupy, int seconddownx, int seconddowny);
+    static bool
+    collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int secondupx, int secondupy, int seconddownx,
+            int seconddowny);
 
     /// @return true if point collide a zone
-    /// @param firstupx up left x
-    /// @param firstupy up left y
-    /// @param firstdownx down right x
-    /// @param firstdowny down right y
+    /// @param upx up left x
+    /// @param upy up left y
+    /// @param downx down right x
+    /// @param downy down right y
     /// @param x point x
     /// @param y point y
-    static bool collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int x, int y);
-    
+    static bool collide(int upx, int upy, int downx, int downy, int x, int y);
+
+    /// @return true if point collide a zone
+    /// @param liste address liste address
+    /// @param x point x
+    /// @param y point y
+    static bool collide(std::vector<Zone *> liste, int x, int y);
+
 };
 
 #endif

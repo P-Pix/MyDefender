@@ -26,7 +26,15 @@ bool Sprite::collide(int firstupx, int firstupy, int firstdownx, int firstdowny,
             firstdowny >= secondupy);
 }
 
-bool Sprite::collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int x, int y)
-{
-    return (firstupx <= x && firstdownx >= x && firstupy <= y && firstdowny >= y);
+bool Sprite::collide(int upx, int upy, int downx, int downy, int x, int y) {
+    return (upx <= x && downx >= x && upy <= y && downy >= y);
+}
+
+bool Sprite::collide(std::vector<Zone *> liste, int x, int y) {
+    for (int i = 0; i < liste.size(); i++) {
+        if (collide(liste[i]->start_x, liste[i]->start_y, liste[i]->end_x, liste[i]->end_y, x, y)) {
+            return true;
+        }
+    }
+    return false;
 }

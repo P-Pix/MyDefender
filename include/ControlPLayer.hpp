@@ -6,16 +6,14 @@
  *
  */
 
-#ifndef _CONTROLPLAYER_HPP_
-#define _CONTROLPLAYER_HPP_
+#ifndef _CONTROL_PLAYER_HPP_
+#define _CONTROL_PLAYER_HPP_
 
 #include <iostream>
-#include "Zone.h"
-#include <vector>
 #include "Sprite.hpp"
+#include "ZoneList.hpp"
 
-class ControlPlayer
-{
+class ControlPlayer : public ZoneList {
 private:
     int m_nbrow = 2;
     int m_nbcol = 4;
@@ -23,9 +21,6 @@ private:
     int m_lifeselect;
     int m_cadenceselect;
     bool m_select = false;
-
-    std::vector<Zone *> m_ListZone;
-
 protected:
 public:
     /// Constructor
@@ -50,13 +45,6 @@ public:
     /// @param x : x of the clic
     /// @param y : y of the clic
     int checkClic(int x, int y);
-
-    /// add a zone to the list
-    void addZone(Zone *zone);
-
-    /// delete all zone to the list
-    void deleteAllZone(void);
-
 };
 
 #endif

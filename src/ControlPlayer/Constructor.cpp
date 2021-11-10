@@ -9,7 +9,7 @@
 #include "../../include/ControlPLayer.hpp"
 
 ControlPlayer::ControlPlayer(void) {
-
+    
 }
 
 ControlPlayer::~ControlPlayer(void) {

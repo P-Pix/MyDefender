@@ -14,6 +14,7 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "ControlPLayer.hpp"
 #include "Defender.hpp"
 #include "Monster.hpp"
 
@@ -33,6 +34,7 @@ private:
     void checkDefender(void);
 
 protected:
+    ControlPlayer m_ControlPlayer;
 public:
     /// Constructor
     Game(void);

@@ -1,5 +1,5 @@
 /**
-* @file Zone.h
+* @file Zone.hpp
  * @author Guillaume LEMONNIER
 */
 
