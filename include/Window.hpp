@@ -28,7 +28,7 @@ private:
 
 protected:
 public:
-    /// Constaructor and framerate controler
+    /// Constructor and framerate controller
     /// \param frame FPS limit
     Window(int frame);
 

@@ -15,11 +15,11 @@
 
 class ControlPlayer : public ZoneList {
 private:
-    int m_nbrow = 2;
-    int m_nbcol = 4;
-    int m_powerselect;
-    int m_lifeselect;
-    int m_cadenceselect;
+    int m_nbRow = 2;
+    int m_nbCol = 4;
+    int m_powerSelect;
+    int m_lifeSelect;
+    int m_cadenceSelect;
     bool m_select = false;
 protected:
 public:
@@ -38,7 +38,7 @@ public:
     /// get the Cadence
     int getCadenceSelect(void);
 
-    /// receve stat of the element
+    /// receive stat of the element
     void setStat(int power, int life, int cadence);
 
     /// check if the clic is in a correct zone and return his

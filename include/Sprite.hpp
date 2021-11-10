@@ -52,20 +52,20 @@ protected:
 
     /// Set Liste animate
     /// \param ListeAnimate liste address file animation
-    void setListeAnimate(std::string ListeAniamte);
+    void setListeAnimate(std::string ListeAnimate);
 
     /// Print all file address
     void printAddressImage(void);
 
 
 public:
-    /// Sprite Constrcutor without address file list
+    /// Sprite Constructor without address file list
     /// Need call setListeAnimate before other actions
     Sprite();
 
     /// Sprite constructor
-    /// \param listeaddress sprite address
-    Sprite(std::string listeaddress);
+    /// \param listeAddress sprite address
+    Sprite(std::string listeAddress);
 
     /// Destructor
     ~Sprite(void);
@@ -73,8 +73,8 @@ public:
     /// Switch Sprite to the next
     void nextAnimation(void);
 
-    /// Switch Sprite to the next with a movemement
-    /// \param direction direction of the movemement
+    /// Switch Sprite to the next with a movement
+    /// \param direction direction of the movement
     void nextAnimation(int direction);
 
     /// \return Sprite SFML
@@ -96,26 +96,26 @@ public:
     std::string getName(void);
 
     /// @return true if two sprites collide
-    /// @param firstupx first up left x
-    /// @param firstupy first up left y
-    /// @param firstdownx first down right x
-    /// @param firstdowny first down right y
-    /// @param secondupx second up left x
-    /// @param secondupy second up left y
-    /// @param seconddownx second down right x
-    /// @param seconddowny second down right y
+    /// @param firstUpX first up left x
+    /// @param firstUpY first up left y
+    /// @param firstDownX first down right x
+    /// @param firstDownY first down right y
+    /// @param secondUpX second up left x
+    /// @param secondUpY second up left y
+    /// @param secondDownX second down right x
+    /// @param secondDownY second down right y
     static bool
-    collide(int firstupx, int firstupy, int firstdownx, int firstdowny, int secondupx, int secondupy, int seconddownx,
-            int seconddowny);
+    collide(int firstUpX, int firstUpY, int firstDownX, int firstDownY, int secondUpX, int secondUpY, int secondDownX,
+            int secondDownY);
 
     /// @return true if point collide a zone
-    /// @param upx up left x
-    /// @param upy up left y
-    /// @param downx down right x
-    /// @param downy down right y
+    /// @param upX up left x
+    /// @param upY up left y
+    /// @param downX down right x
+    /// @param downY down right y
     /// @param x point x
     /// @param y point y
-    static bool collide(int upx, int upy, int downx, int downy, int x, int y);
+    static bool collide(int upX, int upY, int downX, int downY, int x, int y);
 
     /// @return true if point collide a zone
     /// @param liste address liste address
